@@ -17,7 +17,7 @@ public class Attack {
         this.chainLevel = chainLevel;
     }
 
-    public void use(Player target) {
+    public void use(Enemy target) {
         System.out.println("Lanzando " + name + " a " + target.getName());
         target.takeDamage(damage);
 
