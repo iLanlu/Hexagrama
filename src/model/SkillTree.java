@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
 /**
@@ -9,5 +5,14 @@ package model;
  * @author DELL
  */
 public class SkillTree {
-    
+
+    private SkillNode root;
+
+    public SkillTree(String rootName) {
+        this.root = new SkillNode(rootName);
+    }
+
+    public SkillNode getRoot() {
+        return root;
+    }
 }

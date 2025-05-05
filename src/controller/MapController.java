@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package controller;
 
 /**
@@ -9,5 +5,23 @@ package controller;
  * @author DELL
  */
 public class MapController {
-    
+
+    private int currentZone = 0;
+
+    public void loadMap() {
+        System.out.println("Mapa cargado con éxito.");
+    }
+
+    public void showCurrentZone() {
+        System.out.println("Estás en la zona #" + currentZone);
+    }
+
+    public void moveToNextZone() {
+        currentZone++;
+        System.out.println("Te has movido a la zona #" + currentZone);
+    }
+
+    public int getCurrentZone() {
+        return currentZone;
+    }
 }

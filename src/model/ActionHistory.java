@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
+
+import java.util.Stack;
 
 /**
  *
  * @author DELL
  */
 public class ActionHistory {
-    
+
+    private Stack<String> actions;
+
+    public ActionHistory() {
+        actions = new Stack<>();
+    }
+
+    public void record(String action) {
+        actions.push(action);
+    }
+
+    public String undo() {
+        return actions.isEmpty() ? null : actions.pop();
+    }
+
+    public Stack<String> getAllActions() {
+        return actions;
+    }
 }
