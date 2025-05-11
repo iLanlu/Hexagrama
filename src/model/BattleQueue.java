@@ -25,6 +25,10 @@ public class BattleQueue {
         return name;
     }
 
+    public String peekNext() {
+        return turnOrder.peek(); // Devuelve el primer elemento sin modificar la cola
+    }
+
     public Queue<String> getQueue() {
         return turnOrder;
     }

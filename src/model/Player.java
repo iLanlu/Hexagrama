@@ -9,12 +9,13 @@ import java.util.ArrayList;
 public class Player {
 
     private String name;
-    private int health;
+    private int health, maxHealth;
     private ArrayList<Attack> attacks;
 
     public Player(String name) {
         this.name = name;
-        this.health = 100;
+        this.health = 1000;
+        this.maxHealth = 1000;
         this.attacks = new ArrayList<>();
     }
 
@@ -32,7 +33,16 @@ public class Player {
 
     public void takeDamage(int amount) {
         health -= amount;
-        if (health < 0) health = 0;
+        if (health < 0) {
+            health = 0;
+        }
+    }
+
+    public void heal(int amount) {
+        this.health += amount;
+        if (this.health > this.maxHealth) {
+            this.health = this.maxHealth;
+        }
     }
 
     public String getName() {

@@ -5,6 +5,7 @@ package model;
  * @author DELL
  */
 public class Attack {
+
     private String name;
     private int damage;
     private String description;
@@ -17,16 +18,19 @@ public class Attack {
         this.chainLevel = chainLevel;
     }
 
-    public void use(Enemy target) {
+    public int use(Enemy target) {
+        int totalDamage = damage;
         System.out.println("Lanzando " + name + " a " + target.getName());
         target.takeDamage(damage);
 
         if (chainLevel > 0) {
             Attack chained = new Attack(name + " (eco)", damage / 2, "Eco del ataque", chainLevel - 1);
-            chained.use(target); // recursividad aquí
+            totalDamage += chained.use(target);
         }
+
+        return totalDamage;
     }
-    
+
     public String getName() {
         return name;
     }
