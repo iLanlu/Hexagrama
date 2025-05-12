@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,7 +8,7 @@ import java.util.Map;
  *
  * @author DELL
  */
-public class Inventory {
+public class Inventory implements Serializable {
 
     private HashMap<String, Integer> items;
 

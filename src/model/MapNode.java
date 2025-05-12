@@ -1,5 +1,6 @@
 package model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -7,7 +8,7 @@ import java.util.ArrayList;
  *
  * @author DELL
  */
-public class MapNode {
+public class MapNode implements Serializable {
 
     private String name;
     private List<MapNode> neighbors;

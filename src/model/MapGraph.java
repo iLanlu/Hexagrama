@@ -1,13 +1,15 @@
 package model;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  *
  * @author DELL
  */
-public class MapGraph {
+public class MapGraph implements Serializable {
 
     private Map<String, MapNode> nodes;
 
@@ -33,5 +35,9 @@ public class MapGraph {
 
     public Map<String, MapNode> getAllZones() {
         return nodes;
+    }
+
+    public Set<String> getAllZoneNames() {
+        return nodes.keySet();
     }
 }
