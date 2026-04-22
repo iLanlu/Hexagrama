@@ -32,4 +32,4 @@ In development — currently focused on the base logic with **MVC** architecture
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/hexagrama.git
+git clone https://github.com/iLanlu/hexagrama.git
